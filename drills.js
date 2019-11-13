@@ -59,8 +59,13 @@ function findBook(searchDewey, searchTitle, arr, start, end) {
 }
 
 const library = [
-  { author: "Cowlishaw, Mike", dewey: "005.133", title: "The REXX Language" },
-  { author: "Sams", dewey: "005.133", title: "Teach Yourself C++ In 21 Days" },
+  { author: "Cowlishaw, Mike", 
+    dewey: "005.133", 
+    title: "The REXX Language" },
+
+  { author: "Sams", 
+    dewey: "005.133", 
+    title: "Teach Yourself C++ In 21 Days" },
   {
     author: "Stroustrup., Bjarne",
     dewey: "005.133",
@@ -113,11 +118,41 @@ console.log(findBook('005.133', 'The C++ Programming Language', library)) // aut
 const inorder = [14, 15, 19, 25, 27, 35, 79, 89, 90, 91];
 const preOrder = [35, 25, 15, 14, 19, 27, 89, 79, 91, 90];
 
-const postOrder = [, 25, 79, 91, 89, 35]
+const postOrder = [14, 19, 15, 27, 25, 79, 90, 91, 89, 35];
 
 // 2) The post order traversal of a binary search tree is 5 7 6 9 11 10 8. What is its pre-order traversal?
 
+const postOrd = [5, 7, 6, 9, 11, 10, 8];
+const preOrd = [8, 6, 5, 7, 10, 9, 11];
+
 // 5. Implement different tree traversals
 // 6. Find the next commanding officer
+
+
 // 7. Max profit
+// The share price for a company over a week's trading is as follows: 
+// [128, 97, 121, 123, 98, 97, 105]. 
+// If you had to buy shares in the company on a particular day, 
+// and sell the shares on a following day, write an algorithm  
+// to work out what the maximum profit you could make would be.
+
+function maxProfit(array){
+
+  let profitLevel = 0;
+  let profitDay = '';
+
+  for(let i=0; i<array.length; i++){
+    if (array[i] < array[i+1]){
+      let newProfitLevel = array[i+1] - array[i];
+      if(newProfitLevel > profitLevel){
+        profitLevel = newProfitLevel;
+        profitDay = array[i+1];
+      }
+    }
+
+
+  })
+}
+
+
 // 8. Egg drop (optional)
