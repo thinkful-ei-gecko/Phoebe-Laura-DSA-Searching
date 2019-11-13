@@ -1,1 +1,25 @@
 notes.js
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/search-drills/node_modules
+/search-drills/.pnp
+/search-drills.pnp.js
+
+# testing
+/search-drills/coverage
+
+# production
+/search-drills/build
+
+# misc
+/search-drills.DS_Store
+/search-drills.env.local
+/search-drills.env.development.local
+/search-drills.env.test.local
+/search-drills.env.production.local
+
+/search-drills/npm-debug.log*
+/search-drills/yarn-debug.log*
+/search-drills/yarn-error.log*
